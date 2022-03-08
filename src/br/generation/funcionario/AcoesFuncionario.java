@@ -30,20 +30,32 @@ public class AcoesFuncionario {
 		System.out.println("2-" + f2.getNome());
 		char code = input.next().charAt(0);
 		
-		switch(code) {
-			case '1' :
+		while(code != '1' && code != '2') {
+			System.out.println("Código incorreto. Digite: \n1-" + f1.getNome()
+				+ "\n2-" + f2.getNome());
+				code = input.next().charAt(0);
+				}
+					
+			if(code == '1') {
 				f1.informacoes();
 			
 				f1.vender();
 			
 				f1.receberSalario();
+				
+				f1.informacoes();
+			}
 			
-			case '2' :
+			else if(code == '2') {
 				f2.informacoes();
 				
 				f2.vender();
 			
-				f2.receberSalario();		
-		}		
+				f2.receberSalario();
+				
+				f2.informacoes();
+		}
+		
+		input.close();
 	}
 }

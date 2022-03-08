@@ -7,10 +7,10 @@ public class Funcionario {
 	private Scanner input = new Scanner(System.in);
 	
 	private String nome;
-	private double vendas;
-	private double meta;
+	private double vendas = 0;
+	private double meta = 100;
 	private double novaVenda;
-	private double salario;
+	private double salario = 0;
 	private double comissao = 0;
 	private char codigo;
 	
@@ -93,16 +93,22 @@ public class Funcionario {
 			
 			System.out.println();
 		}
-		if(codigo =='2') {			
+		if(codigo =='2') {
+			System.out.println("Vendas do mês encerradas.\n");
 		}		
 	}
 	
 	void receberSalario() {
-		if(meta >= vendas) {
+		if(meta <= vendas) {
 			salario += comissao;
 			
+			System.out.println("Bonus: R$" + comissao);		
+		}
+		else {
+			comissao = 0;
 			System.out.println("Bonus: R$" + comissao);
-			informacoes();			
+			System.out.println();
+			
 		}
 	}
 }
