@@ -77,7 +77,7 @@ public class Funcionario {
 		System.out.println("1-Sim \n2-Não");
 		codigo = input.next().charAt(0);
 		
-		while(codigo != '1' || codigo != '2') {
+		while(codigo != '1' && codigo != '2') {
 			System.out.println("Codigo invalido, digite \n1-Sim \n2-não");
 			codigo = input.next().charAt(0);
 		}
@@ -94,7 +94,6 @@ public class Funcionario {
 			System.out.println();
 		}
 		if(codigo =='2') {			
-			informacoes();
 		}		
 	}
 	

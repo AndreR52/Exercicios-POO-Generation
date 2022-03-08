@@ -31,17 +31,19 @@ public class AcoesFuncionario {
 		char code = input.next().charAt(0);
 		
 		switch(code) {
-		case '1' :
-			f1.informacoes();
+			case '1' :
+				f1.informacoes();
 			
-			f1.vender();
+				f1.vender();
 			
-			f1.receberSalario();
+				f1.receberSalario();
 			
-		}
-						
-		
-		
+			case '2' :
+				f2.informacoes();
+				
+				f2.vender();
+			
+				f2.receberSalario();		
+		}		
 	}
-
 }
